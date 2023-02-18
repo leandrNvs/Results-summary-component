@@ -1,0 +1,229 @@
+@font-face {
+  font-family: hanken-500;
+  src: url("../fonts/static/HankenGrotesk-Medium.ttf");
+}
+
+@font-face {
+  font-family: hanken-700;
+  src: url("../fonts/static/HankenGrotesk-Bold.ttf");
+}
+
+@font-face {
+  font-family: hanken-800;
+  src: url("../fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  --Light-red-Bg: hsla(0, 100%, 67%, 0.05);
+  --Orangey-yellow-Bg: hsla(39, 100%, 56%, 0.07);
+  --Green-teal-Bg: hsla(166, 100%, 37%, 0.05);
+  --Cobalt-blue-Bg: hsla(234, 85%, 45%, 0.05);
+
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  --border-radius: 2rem;
+}
+
+body {
+  background-color: var(--Pale-blue);
+}
+
+main {
+  background-color: var(--White);
+}
+
+main > div:first-of-type {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  text-align: center;
+  padding: 2rem;
+}
+
+main > div:first-of-type span {
+  font-size: 1.5rem;
+  font-family: hanken-700;
+  color: var(--White);
+}
+
+main > div:first-of-type p {
+  color: var(--White);
+  font-family: hanken-500;
+  color: var(--Light-lavender);
+  font-size: 0.825rem;
+  margin-top: 0.2rem;
+}
+
+h1 {
+  font-family: hanken-500;
+  color: var(--Light-lavender);
+  font-size: 1.1rem;
+}
+
+.circle {
+  background: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+  );
+
+  height: 120px;
+  width: 120px;
+  margin: 1.5rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.circle span:first-of-type {
+  font-size: 3rem;
+  font-family: hanken-800;
+  color: var(--White);
+}
+
+.circle span:last-of-type {
+  font-family: hanken-500;
+  color: var(--Light-lavender);
+  font-size: 0.825rem;
+}
+
+main > div:last-of-type {
+  width: 85%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 400px;
+}
+
+main > div:last-of-type h2 {
+  font-family: hanken-500;
+  font-size: 1rem;
+  color: var(--Dark-gray-blue);
+}
+
+.item {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+}
+
+.item p {
+  font-size: 0.925rem;
+}
+
+.item p:first-of-type {
+  font-family: hanken-700;
+}
+
+.item p:last-of-type {
+  margin-left: auto;
+  color: var(--Light-lavender);
+}
+
+.item p:last-of-type span {
+  font-family: hanken-700;
+  color: var(--Dark-gray-blue);
+}
+
+.reaction {
+  background-color: var(--Light-red-Bg);
+}
+
+.memory {
+  background-color: var(--Orangey-yellow-Bg);
+}
+
+.verbal {
+  background-color: var(--Green-teal-Bg);
+}
+
+.visual {
+  background-color: var(--Cobalt-blue-Bg);
+}
+
+.reaction p:first-of-type {
+  color: var(--Light-red);
+}
+
+.memory p:first-of-type {
+  color: var(--Orangey-yellow);
+}
+
+.verbal p:first-of-type {
+  color: var(--Green-teal);
+}
+
+.visual p:first-of-type {
+  color: var(--Cobalt-blue);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  border: 0;
+  background: var(--Dark-gray-blue);
+  font-family: hanken-500;
+  font-size: 1.1rem;
+  color: var(--White);
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
+
+@media (min-width: 1100px) {
+  body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  main > div:first-of-type {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+}
