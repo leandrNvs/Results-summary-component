@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 
 window.onload = function () {
-  fetch("../../data.json")
+  fetch("https://leandrnvs.github.io/Results-summary-component/data.json")
     .then((res) => res.json())
     .then((res) => {
       for (let obj of res) {
